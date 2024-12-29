@@ -5,7 +5,7 @@ led = 1
 period = 50
 frecuency = 500
 duty = 1023
-dutyOff = 1023
+dutyOff = 0
 
 # Configuración de pines
 pwm13 = PWM(Pin(13))
@@ -27,7 +27,7 @@ def setLed():
 
     duty -= 10
     if duty < 0:
-        duty = dutyOff
+        duty = 1023
         led += 1
         if led > 3:
             led = 1
